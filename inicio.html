@@ -1,49 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Place</title>
-
-    <!-- fonte Allura -->
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Allura&display=swap">
     <style>
-        
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: "Arial", sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
         }
-
+        
+        /* CABEÇALHO */
         header {
             background: linear-gradient(to left, #222222, #511862, #12468b, #511862, #222222);
             padding: 15px 0;
-            width: 100%;
-            text-align: left;
+            text-align: center;
             color: white;
             font-family: "Allura", cursive;
+            margin-bottom: 30px;
+            border-radius: 8px;
         }
-
-        h1 {
-            font-size: 30px;
-            letter-spacing: 2px;
+        
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
         }
-
-
+        
+        /* PRINCIPAIS */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .retangulo {
+            background-color:  white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .titulo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #511862;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .musica-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .musica-item:hover {
+            background-color: #f0f0f0;
+            transform: translateX(5px);
+        }
+        
+        .destaque {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #12468b;
+        }
+        
+        .normal {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* EFEITOS  */
+        .musica-item:hover .destaque {
+            color: #511862;
+        }
+        
+        /* ADAPTAÇÃO */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .retangulo {
+                padding: 20px 15px;
+            }
+        }
     </style>
 </head>
-
 <body>
     <header>
         <h1>Music Place</h1>
     </header>
+    
+    <div class="container">
+        <!--RECENTES -->
+        <section class="retangulo">
+            <h2 class="tutilo">RECENTES</h2>
+            <div class="musica-item">
+                <p class="destaque">Podcast</p>
+                <p class="normal"> EP 4.</p>
+                <p class="normal"> Como fazer seus gatos se reentenderem </p>
+            </div>
+        </section>
+        
+        <!-- EXTRAORDINÁRIA EBONY -->
+        <section class="retangulo">
+            <h2 class="titulo">Extraordinária Ebony</h2>
+            <div class="musica-item">
+                <p class="destaque">Rollin</p>
+                <p class="normal">Limp Bizkat</p>
+            </div>
+        </section>
+        
+        <!--LANÇAMENTOS -->
+        <section class="retangulos">
+            <h2 class="titulo">LANÇAMENTOS</h2>
+            <div class="destaque">Grabriella Katseye</p>
+                <p class="normal">Belieber Veigh Supernova</p>
+            </div>
+            <div class="musica-item">
+                <p class="destaque">ENHYPEN</p>
+                <p class="normal">Real Desire (With or Without You)</p>
+            </div>
+        </section>
+        
+        <!-- RECOMENDAÇÕES -->
+        <section class="retangulo">
+            <h2 class="titulo">TALVEZ VOCÊ GOSTE</h2>
+            <div class="musica-item">
+                <p class="destaque">Grupo EXO</p>
+            </div>
+            <div class="musica-item">
+                <p class="destaque">Dua Lipa</p>
+            </div>
+            <div class="musica-item">
+                <p class="destaque">Grupo Stray Kids</p>
+            </div>
+        </section>
+    </div>
 </body>
-
 </html>
