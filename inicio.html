@@ -14,7 +14,7 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #f8f9fa;
+            background-color: #000000;
             color: #333;
             line-height: 1.6;
             padding: 20px;
@@ -36,19 +36,18 @@
             font-weight: normal;
         }
         
-        /* PRINCIPAIS */
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
         
         .retangulo {
-            background-color:  white;
+            background:linear-gradient( #e2c3ed, #925f72);
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 30px;
             margin-left: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow:  4px 15px rgba(0, 0, 0, 0.1);
         }
         
         .titulo {
@@ -85,21 +84,10 @@
             font-size: 0.95rem;
         }
         
-        /* EFEITOS  */
         .musica-item:hover .destaque {
             color: #511862;
         }
         
-        /* ADAPTAÇÃO */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .retangulo {
-                padding: 20px 15px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -108,13 +96,19 @@
     </header>
     
     <div class="container">
-        <!--RECENTES -->
+        <!--recentes-->
         <section class="retangulo">
             <h2 class="tutilo">RECENTES</h2>
             <div class="musica-item">
                 <p class="destaque">Podcast</p>
                 <p class="normal"> EP 4.</p>
                 <p class="normal"> Como fazer seus gatos se reentenderem </p>
+            </div>
+            <!-- EXTRAORDINÁRIA EBONY -->
+            <h2 class="titulo">Extraordinária Ebony</h2>
+            <div class="musica-item">
+                <p class="destaque">Rollin</p>
+                <p class="normal">Limp Bizkat</p>
             </div>
         </section>
         
