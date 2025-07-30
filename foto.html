@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pot">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fotos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: linear-gradient(to left, #222222, #511862, #12468b, #511862, #222222);
+            padding: 15px 0;
+            text-align: left;
+            color: white;
+            font-family: "Allura", cursive;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tres-barrinhas {
+            position: absolute;
+            top: 70px;
+            right: 40px;
+            z-index: 1001;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .tres-barrinhas .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #520a81;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .menu a {
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #340752;
+        }
+
+        .titulo_logo {
+            position: relative;
+            display: inline-block;
+            padding: 20px 30px;
+        }
+
+        .titulo_logo h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.8rem;
+            font-family: "Allura", cursive;
+            color: white;
+        }
+
+        .titulo_logo::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('https://i.ibb.co/twMzFFNt/Image.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+        }
+
+
+        img {
+            margin-right: 15px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 20px;
+
+        }
+
+        body {
+            background-color: black;
+            color: rgb(248, 239, 239);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px;
+
+        }
+
+        .caixa {
+            background-color: rgb(95, 58, 230);
+            border-radius: 10px;
+            max-width: 600px;
+            margin: left;
+            margin-top: 50px;
+            box-shadow: rgb(145, 145, 145)
+        }
+
+        .comentario {
+            display: flex;
+            flex-direction: column;
+        }
+
+       
+    </style>
+</head>
+
+<header>
+    <div class="titulo_logo">
+        <h1>Music Place</h1>
+    </div>
+    <button class="tres-barrinhas" onclick="openmenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
+
+    <div class="menu" id="menu">
+        <a href="javascript:void(0)" onclick="closemenu()">&times; Fechar</a>
+        <a href="fotos.html">Fotos</a>
+        <a href="videos.html">Videos</a>
+        <a href="musicas.html">Musicas</a>
+        <a href="playlist.html">Playlists</a>
+        <a href="artistas.html">Artistas</a>
+    </div>
+
+</header>
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+    <!--coluna da imagem + comentario-->
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Linkin_Park_-_From_Zero_Lead_Press_Photo_-_James_Minchin_III.jpg/1200px-Linkin_Park_-_From_Zero_Lead_Press_Photo_-_James_Minchin_III.jpg"
+            alt="fotos" width="500px" height="425px">
+
+
+        <!--comentario abaixo da imagem-->
+        <div class="comentario" style="margin-bottom: 15px;">
+            <div class="header-comentario">
+                <strong> Oswando_marquez </strong>
+                <span class="tempo">1min</span>
+                <p>"já tava na hora de voltar"</p>
+            </div>
+        </div>
+        <div class="comentario" style="margin-bottom: 15px;">
+            <div class="header-comentario">
+                <strong> Steve_morais </strong>
+                <span class="tempo">1h</span>
+                <p>"ebaaaa"</p>
+            </div>
+        </div>
+
+        <!--coluna da discrição e formulario-->
+        <div>
+            <h1> Linkin Park </h1>
+            <p>Linkin Park é uma banda de rock dos Estados Unidos formada em Agoura Hills, <br> A formação atual da
+                banda
+                inclui o vocalista e multi-instrumentista Mike Shinoda, <br> o guitarrista Brad Delson, o baixista Dave
+                Farrell, <br>o DJ Joe Hahn, a vocalista Emily Armstrong <br>e o baterista Colin Brittain</p>
+            <!--caixa de curtir e comentar-->
+            <div class="caixa">
+                <div
+                    style="background-color: #6633ee; padding: 15px; border-radius: 8px; color: white; margin-top: 10px;">
+                    <button style="margin-bottom: 10px;">curtir ❤️</button><br>
+                    <input type="text" placeholder="digite um comentario..." style="width: 100%; padding: 5px;"><br><br>
+                    <button>comentar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </head>
+
+    <body>
+
+    </body>
+    <script>
+
+        function openmenu() {
+            document.getElementById("menu").style.width = "250px";
+            document.querySelector(".tres-barrinhas").style.display = "none";
+        }
+
+        function closemenu() {
+            document.getElementById("menu").style.width = "0";
+            document.querySelector(".tres-barrinhas").style.display = "block";
+        }
+
+
+    </script>
+
+</html>
