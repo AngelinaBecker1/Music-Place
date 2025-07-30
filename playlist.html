@@ -19,34 +19,242 @@
 
     
    /* CABEÇALHO */
-   header {
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
             background: linear-gradient(to left, #222222, #511862, #12468b, #511862, #222222);
             padding: 15px 0;
             text-align: left;
             color: white;
-            font-family: "Allura", sans-serif;
+            font-family: "Allura", cursive;
             margin-bottom: 30px;
             border-radius: 8px;
         }
-        .h1 {
-            font-size: 100;
-            font-family: "Allura", sans-serif;
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tres-barrinhas {
+            position: absolute;
+            top: 50px;
+            right: 80px;
+            z-index: 1001;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .tres-barrinhas .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #520a81;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .menu a {
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #340752;
+        }
+
+        .titulo_logo {
+            position: relative;
+            display: inline-block;
+            padding: 20px 30px;
+        }
+
+        .titulo_logo h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.8rem;
+            font-family: "Allura", cursive;
+            color: white;
+        }
+
+        .titulo_logo::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('https://i.ibb.co/twMzFFNt/Image.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
+        }
+
+     .apresentacao{ 
+             font-family: "Allura", cursive;
+            text-align: center;
+            color:white
+        }
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+ 
+}
+
+/* Estilo base*/
+.lp, .kpop, .ebony{
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 20px;
+    width: 900px;
+    height: 110px;
+    margin: 20px auto;
+    background: linear-gradient(to left, #222222, #511862, #12468b, #511862, #222222);
+    /*margin-left e margin-top não funcionariam para alinhar */
+}
+
+/* Estilo das imagens */
+.lp img, .kpop img, .ebony img{
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+/* dentro do retangulo */
+    .texto1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 0px;
+      margin-right: auto;
+      color: #ffffff;
+       font-family: "Allura", cursive;
+     }
+
+     .texto2 {
+         font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 0px;
+      margin-left: auto;
+      color: #ffffff;
+     }
+
     </style>
+
 </head>
 <body>
-     <header> 
-        <h1>Music Place</h1>
-     </header>
+     <header>
+        <div class="titulo_logo">
+            <h1>Music Place</h1>
+        </div>
+        <button class="tres-barrinhas" onclick="openmenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
 
-     <div class="container">
+        <div class="menu" id="menu">
+            <a href="javascript:void(0)" onclick="closemenu()">&times; Fechar</a>
+            <a href="fotos.html">Fotos</a>
+            <a href="videos.html">Videos</a>
+            <a href="musicas.html">Musicas</a>
+            <a href="playlist.html">Playlists</a>
+            <a href="artistas.html">Artistas</a>
+        </div>
 
+    </header>
     <!-- Area do canto superior -->
 
-     <section class="retangulo"
-     <center> <p> Suas playlists </p> </center>
+    <div class="apresentacao">
 
-     </div>
+    <h1>Suas playlists</h1>
+
+    </div>
+
+    <div class="container">
+      <div section class="lp">
+        <img src="https://imgs.search.brave.com/pw3F2IDVuzIN7NvM03aIh5Rem51U7sSAgo-BGxhQsxM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tdW5k/b3ZpbnlsLmNvbS5i/ci93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MS8wOC9jYXBhLTYt/MjgweDI4MC5qcGc" alt="Capa do LP">
+         <div class="texto1">
+        <h1> Linkin Park </h1>
+        </div>
+        <div class="texto2">
+        <h3> Hybrid Theory
+            24 Oct 2000
+        </h3>
+          </div>
+         </div> 
+       </div>
+    </div>
+
+    <div class="container">
+       <div section class="kpop">
+        <img src="https://imgs.search.brave.com/hiSOHgNzqxQJRwMU_2DMD8eidjn57mNEQf_RJ1OtZ0E/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/aHVudHJpeC1ydW1p/LW1pcmEtem9leS1m/cm9tLWtwb3AtZGVt/b24taHVudGVycy12/MC05OGpmZm1zbW9s/OWYxLmpwZz93aWR0/aD02NDAmY3JvcD1z/bWFydCZhdXRvPXdl/YnAmcz0yMGFjNjI5/ZWI3MmNhMzAxZGIz/Yjg3NGUxODc3NjFm/ZWI0ZmEwN2U4" alt="Capa das HUNTR/K">
+       <div class="texto1">
+        <h1> Huntr/k </h1>
+        </div>
+        <div class="texto2">
+        <h3> Letal 
+            20 Jun 2025
+        </h3>
+         </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div section class="ebony">
+        <img src="https://imgs.search.brave.com/qHEh9FC5NwJRpFcydaM8IN77cygOqlxOHB2Wr6AJkt0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdWJz/dGFja2Nkbi5jb20v/aW1hZ2UvZmV0Y2gv/d18xNDU2LGNfbGlt/aXQsZl9hdXRvLHFf/YXV0bzpnb29kLGZs/X3Byb2dyZXNzaXZl/OnN0ZWVwL2h0dHBz/Oi8vc3Vic3RhY2st/cG9zdC1tZWRpYS5z/My5hbWF6b25hd3Mu/Y29tL3B1YmxpYy9p/bWFnZXMvZjQ2ZmZm/YjEtYTZkZi00YmNm/LTllMzItODMwYTI0/OTIwMGIxXzEwMDB4/MTAwMC5wbmc" alt="Capa da Ebony">
+        <div class="texto1">
+        <h1> Extraordinária </h1>
+        </div>
+        <div class="texto2">
+        <h3> KM2 
+            12 May 2025
+        </h3>
+           </div>
+         </div>
+      </div>
+    </div>
     
 </body>
 </html>
