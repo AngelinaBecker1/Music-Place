@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Place</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Allura&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Allura&display=swap">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #000000;
@@ -19,37 +21,36 @@
             line-height: 1.6;
             padding: 20px;
         }
-        
-        /* CABEÇALHO */
+
         header {
             background: linear-gradient(to left, #222222, #511862, #12468b, #511862, #222222);
             padding: 15px 0;
-            text-align: center;
+            text-align: left;
             color: white;
             font-family: "Allura", cursive;
             margin-bottom: 30px;
             border-radius: 8px;
         }
-        
+
         header h1 {
             font-size: 2.8rem;
             font-weight: normal;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .retangulo {
-            background:linear-gradient( #e2c3ed, #925f72);
+            background: linear-gradient(#e2c3ed, #925f72);
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 30px;
             margin-left: 30px;
-            box-shadow:  4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .titulo {
             font-size: 1.5rem;
             font-weight: 700;
@@ -60,80 +61,168 @@
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
         }
-        
+
         .musica-item {
             margin-bottom: 15px;
             padding: 12px;
             border-radius: 6px;
             transition: all 0.3s ease;
         }
-        
+
         .musica-item:hover {
             background-color: #f0f0f0;
             transform: translateX(5px);
         }
-        
+
         .destaque {
             font-size: 1.2rem;
             font-weight: 600;
             color: #12468b;
         }
-        
+
         .normal {
             color: #666;
             font-size: 0.95rem;
         }
-        
+
         .musica-item:hover .destaque {
             color: #511862;
         }
-        
+
+        .tres-barrinhas {
+            position: absolute;
+            top: 70px;
+            right: 40px;
+            z-index: 1001;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .tres-barrinhas .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #520a81;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .menu a {
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #340752;
+        }
+
+        .titulo_logo {
+            position: relative;
+            display: inline-block;
+            padding: 20px 30px;
+        }
+
+        .titulo_logo h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.8rem;
+            font-family: "Allura", cursive;
+            color: white;
+        }
+
+        .titulo_logo::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('https://i.ibb.co/twMzFFNt/Image.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Music Place</h1>
+        <div class="titulo_logo">
+            <h1>Music Place</h1>
+        </div>
+        <button class="tres-barrinhas" onclick="openmenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <div class="menu" id="menu">
+            <a href="javascript:void(0)" onclick="closemenu()">&times; Fechar</a>
+            <a href="fotos.html">Fotos</a>
+            <a href="videos.html">Videos</a>
+            <a href="musicas.html">Musicas</a>
+            <a href="playlist.html">Playlists</a>
+            <a href="artistas.html">Artistas</a>
+        </div>
+
     </header>
-    
+
     <div class="container">
-        <!--recentes-->
+        <!--parte dos recentes-->
         <section class="retangulo">
-            <h2 class="tutilo">RECENTES</h2>
+            <h2 class="titulo">RECENTES</h2>
             <div class="musica-item">
                 <p class="destaque">Podcast</p>
                 <p class="normal"> EP 4.</p>
                 <p class="normal"> Como fazer seus gatos se reentenderem </p>
             </div>
-            <!-- EXTRAORDINÁRIA EBONY -->
-            <h2 class="titulo">Extraordinária Ebony</h2>
             <div class="musica-item">
-                <p class="destaque">Rollin</p>
-                <p class="normal">Limp Bizkat</p>
+                <p class="destaque">In The End </p>
+                <p class="normal">Linkin Park</p>
+            </div>
+            <div class="musica-item">
+                <p class="destaque">Extraordinaria</p>
+                <p class="normal">Ebony</p>
             </div>
         </section>
-        
-        <!-- EXTRAORDINÁRIA EBONY -->
+
+        <!--parte dos lançamentos -->
         <section class="retangulo">
-            <h2 class="titulo">Extraordinária Ebony</h2>
-            <div class="musica-item">
-                <p class="destaque">Rollin</p>
-                <p class="normal">Limp Bizkat</p>
-            </div>
-        </section>
-        
-        <!--LANÇAMENTOS -->
-        <section class="retangulos">
             <h2 class="titulo">LANÇAMENTOS</h2>
-            <div class="destaque">Grabriella Katseye</p>
-                <p class="normal">Belieber Veigh Supernova</p>
+            <div class="musica-item">
+                <p class="destaque">Gabriella </p>
+                <p class="normal">Katseye</p>
+            </div>
+            <div class="musica-item">
+                <p class="destaque">Belieber </p>
+                <p class="normal"> Veigh Supernova </p>
             </div>
             <div class="musica-item">
                 <p class="destaque">ENHYPEN</p>
                 <p class="normal">Real Desire (With or Without You)</p>
             </div>
         </section>
-        
-        <!-- RECOMENDAÇÕES -->
+
+        <!-- parte das recomendações-->
         <section class="retangulo">
             <h2 class="titulo">TALVEZ VOCÊ GOSTE</h2>
             <div class="musica-item">
@@ -148,4 +237,19 @@
         </section>
     </div>
 </body>
+<script>
+
+    function openmenu() {
+        document.getElementById("menu").style.width = "250px";
+        document.querySelector(".tres-barrinhas").style.display = "none";
+    }
+
+    function closemenu() {
+        document.getElementById("menu").style.width = "0";
+        document.querySelector(".tres-barrinhas").style.display = "block";
+    }
+
+
+</script>
+
 </html>
