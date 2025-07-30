@@ -1,10 +1,19 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sthefany.css" type="text/css">
+</head>
 <style>
-     * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     iframe {
         margin-left: 50%;
         margin-top: 13%;
@@ -25,136 +34,161 @@
     body {
         background-color: black;
     }
+
     header {
-            background: linear-gradient(to left, #222222, #511862, #12468b, #511862, #222222);
-            padding: 15px 0;
-            text-align: left;
-            color: white;
-            font-family: "Allura", cursive;
-            margin-bottom: 30px;
-            border-radius: 8px;
-        }
+        background: linear-gradient(to left, #222222, #511862, #12468b, #511862, #222222);
+        padding: 15px 0;
+        text-align: left;
+        color: white;
+        font-family: "Allura", cursive;
+        margin-bottom: 30px;
+        border-radius: 8px;
+    }
 
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: normal;
-        }
+    header h1 {
+        font-size: 2.8rem;
+        font-weight: normal;
+    }
+
     .tres-barrinhas {
-            position: absolute;
-            top: 70px;
-            right: 40px;
-            z-index: 1001;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        z-index: 1001;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
 
-        .tres-barrinhas .bar {
-            width: 25px;
-            height: 3px;
-            background-color: #ffffff;
-            margin: 5px 0;
-            transition: 0.3s;
-        }
+    .tres-barrinhas .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
 
-        .menu {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #520a81;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-            z-index: 1000;
-        }
+    .menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #520a81;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 1000;
+    }
 
-        .menu a {
-            padding: 12px 20px;
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
+    .menu a {
+        padding: 12px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
 
-        .menu a:hover {
-            background-color: #340752;
-        }
+    .menu a:hover {
+        background-color: #340752;
+    }
 
-        .titulo_logo {
-            position: relative;
-            display: inline-block;
-            padding: 20px 30px;
-        }
+    .titulo_logo {
+        position: relative;
+        display: inline-block;
+        padding: 20px 30px;
+    }
 
-        .titulo_logo h1 {
-            position: relative;
-            z-index: 2;
-            font-size: 2.8rem;
-            font-family: "Allura", cursive;
-            color: white;
-        }
+    .titulo_logo h1 {
+        position: relative;
+        z-index: 2;
+        font-size: 2.8rem;
+        font-family: "Allura", cursive;
+        color: white;
+    }
 
-        .titulo_logo::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-image: url('https://i.ibb.co/twMzFFNt/Image.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: 0.15;
-            width: 200px;
-            height: 200px;
-            z-index: 1;
-        }
+    .titulo_logo::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('https://i.ibb.co/twMzFFNt/Image.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+    }
 </style>
 
-<div>
-<html lang="en">
-<div class="container">
-    <h1 style="margin-top: 250px;">Título da Página</h1>
-
-
-
-</div>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="sthefany.css" type="text/css">
-</head>
-
 <body>
+    <header>
+        <div class="titulo_logo">
+            <h1>Music Place</h1>
+        </div>
+        <button class="tres-barrinhas" onclick="openmenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
 
-
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Pz0ks9THIQc?si=BRXjERNLeper2Ih1"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<div style="display: flex; align-items: center;">
-    <img src="https://i.pinimg.com/736x/54/5f/fa/545ffa4ad8e2f232c0c7878d87eaa477.jpg" alt="Sua imagem" style="vertical-align: top;">
-    <p>Texto ao lado da imagem.</p>
-  </div>
-
-<div class="fundo">
-</div>
-    
-</body>
-    <div class="menu" id="menu">
+        <div class="menu" id="menu">
             <a href="javascript:void(0)" onclick="closemenu()">&times; Fechar</a>
             <a href="inicio.html">Inicio</a>
-            <a href="fotos.html">Fotos</a>
+            <a href="foto.html">Fotos</a>
             <a href="video.html">Videos</a>
             <a href="musicas.html">Musicas</a>
             <a href="playlist.html">Playlists</a>
             <a href="artistas.html">Artistas</a>
         </div>
 
+    </header>
+    <div>
+        <div class="container">
+            <h1 style="margin-top: 250px;">Título da Página</h1>
+        </div>
+
+
+
+
+
+
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Pz0ks9THIQc?si=BRXjERNLeper2Ih1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+
+
+        <div style="display: flex; align-items: center;">
+            <img src="https://i.pinimg.com/736x/54/5f/fa/545ffa4ad8e2f232c0c7878d87eaa477.jpg" alt="Sua imagem"
+                style="vertical-align: top;">
+            <p>Texto ao lado da imagem.</p>
+        </div>
+
+        <div class="fundo">
+        </div>
+        </div>
+        <script>
+
+            function openmenu() {
+                document.getElementById("menu").style.width = "250px";
+                document.querySelector(".tres-barrinhas").style.display = "none";
+            }
+
+            function closemenu() {
+                document.getElementById("menu").style.width = "0";
+                document.querySelector(".tres-barrinhas").style.display = "block";
+            }
+
+
+        </script>
+</body>
+
 </html>
-
-
